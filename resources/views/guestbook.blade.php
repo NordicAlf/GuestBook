@@ -6,13 +6,13 @@
         <form class="form" action="{{ route('GuestBook.store') }}" method="POST">
             @csrf
             <div class="textForm">Name</div>
-            <input class="inputText" type="text" name="name">
+            <input class="inputText" type="text" name="name" required>
 
             <div class="textForm">Email</div>
-            <input class="inputText" type="text" name="email">
+            <input class="inputText" type="email" name="email" required>
 
             <div class="textForm">Message</div>
-            <textarea class="inputBigText" name="text"></textarea>
+            <textarea class="inputBigText" name="text" required></textarea>
 
             <button class="submit">Submit</button>
 
@@ -32,6 +32,10 @@
                     <div class="lineComment"></div>
                 </div>
             @endforeach
+
+            {{--Pagination--}}
+            {{ $comments->links() }}
+
         </div>
     </div>
 

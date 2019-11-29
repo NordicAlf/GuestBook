@@ -14,7 +14,7 @@ class GuestBookRepository
         $data = DB::table('guest_books')
             ->select('name', 'email', 'text', 'created_at')
             ->orderBy('created_at', 'DESC')
-            ->get();
+            ->paginate(4);
 
         return $data;
     }

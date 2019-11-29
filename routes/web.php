@@ -12,5 +12,6 @@
 */
 
 Route::resource('/', 'GuestBookController')
+    ->only('index', 'store')
     ->names('GuestBook');
 
