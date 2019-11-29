@@ -1,6 +1,6 @@
 .main {
     width: 700px;
-    height: 600px;
+    height: 100%;
     background-color: #F5F5F5;
     margin: 50px auto;
     padding: 1px;
@@ -10,7 +10,7 @@
 
 .form {
     width: 500px;
-    height: 350px;
+    height: 100%;
     background-color: #E4E4E4;
     margin: 20px auto;
 }
@@ -81,4 +81,30 @@
     height: 3px;
     background-color: #828282;
     border-radius: 50%;
+}
+
+.successMessageSaveComment {
+    width: 300px;
+    height: 30px;
+    border: 1px gray solid;
+    border-radius: 2px;
+    background-color: #D4EDDA;
+    align-items: right;
+    margin: 10px auto;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.failedMessageSaveComment {
+    width: 300px;
+    height: 30px;
+    border: 1px gray solid;
+    border-radius: 2px;
+    background-color: #F8D7DA;
+    align-items: right;
+    margin: 10px auto;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: bold;
 }

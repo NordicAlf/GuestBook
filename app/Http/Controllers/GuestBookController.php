@@ -2,10 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GuestBook;
+use App\Repositories\GuestBookRepository;
 use Illuminate\Http\Request;
 
 class GuestBookController extends Controller
 {
+    private $guestBookRepository;
+
+    /**
+     * connect to repositories
+     */
+    public function __construct()
+    {
+        $this->guestBookRepository = app(GuestBookRepository::class);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +25,9 @@ class GuestBookController extends Controller
      */
     public function index()
     {
-        return view('guestbook');
+        $comments = $this->guestBookRepository->getComments();
+
+        return view('guestbook', compact('comments'));
     }
 
     /**
@@ -34,7 +48,19 @@ class GuestBookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comment = $this->guestBookRepository->getData($request);
+
+        $result = $this->guestBookRepository->saveComment($comment);
+
+        if ($result) {
+            return redirect()
+                ->route('GuestBook.index')
+                ->with(['success' => 'Success. Comment saved.']);
+        } else {
+            return back()
+                ->with(['fail' => 'Fail. Comment unsaved.'])
+                ->withInput();
+        }
     }
 
     /**
