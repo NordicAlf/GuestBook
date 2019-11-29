@@ -1,0 +1,84 @@
+.main {
+    width: 700px;
+    height: 600px;
+    background-color: #F5F5F5;
+    margin: 50px auto;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 500px;
+    height: 350px;
+    background-color: #E4E4E4;
+    margin: 20px auto;
+}
+
+.textForm {
+    width: 400px;
+    height: 20px;
+    margin: 15px auto 5px auto;
+    font-weight: bold;
+}
+
+.inputText {
+    width: 385px;
+    height: 20px;
+    margin: 1px auto;
+    display: block;
+}
+
+.inputBigText {
+    width: 400px;
+    height: 80px;
+    margin: 1px auto;
+    display: block;
+}
+
+.submit{
+    width: 100px;
+    height: 30px;
+    border: 1px #B6B6B3 solid;
+    border-radius: 5px;
+    background-color: #c5c5c2;
+    margin: 20px 300px 10px 50px;
+}
+
+.submit:hover {
+    background-color: #a9a9a6;
+    text-shadow: white 1px 1px 0, white -1px -1px 0,
+    white -1px 1px 0, white 1px -1px 0;
+}
+
+.commentsContainer {
+    width: 400px;
+    height: 100%;
+    margin: 20px auto;
+}
+
+.comment {
+    width: 400px;
+    height: 100px;
+}
+
+.authorComment {
+    width: 100%;
+    height: 20px;
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.messageComment {
+    width: 100%;
+    height: 20px;
+    font-size: 14px;
+}
+
+.lineComment {
+    width: 100%;
+    height: 3px;
+    background-color: #828282;
+    border-radius: 50%;
+}
